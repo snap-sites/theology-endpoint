@@ -1,15 +1,6 @@
 {
 	"name": "theology-endpoint",
-	"main": "src/index.ts", // or "index.ts" depending on your structure
-	"compatibility_date": "2024-04-19",
-	"build": {
-	  "command": "",
-	  "cwd": "",
-	  "watch_dir": ""
-	},
-	"compatibility_flags": [],
-	"usage_model": "bundled", // or "unbound", depending on your plan
-	"type": "module", // ✅ this is critical for 'export default' style
-	// You can add env vars here if needed
+	"main": "src/index.ts", 
+	"compatibility_date": "2024-04-19"
   }
   
