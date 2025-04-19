@@ -1,4 +1,6 @@
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const OPENAI_API_KEY = OPENAI_API_KEY;
+
+console.log(OPENAI_API_KEY); // Test if the key is being accessed properly
 
 export default {
 	async fetch(request: Request): Promise<Response> {
