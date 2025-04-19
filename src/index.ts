@@ -22,8 +22,7 @@ export default {
 		  method: "POST",
 		  headers: {
 			"Content-Type": "application/json",
-			Authorization: `Bearer ${YOUR_OPENAI_API_KEY}`, // replace securely
-		  },
+			Authorization: `Bearer ${OPENAI_API_KEY}`,		  },
 		  body: JSON.stringify({
 			model: "gpt-3.5-turbo",
 			messages: prompt,
