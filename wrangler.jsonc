@@ -1,5 +1,7 @@
 {
 	"name": "theology-endpoint",
+	"compatibility_date": "2025-04-19",
+  	"main": "src/index.ts"
 	"vars": {
 	"OPENAI_API_KEY": "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"
 	}
