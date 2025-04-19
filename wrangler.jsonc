@@ -1,6 +1,6 @@
 {
 	"name": "theology-endpoint",
 	"main": "src/index.ts", 
-	"compatibility_date": "2024-04-19"
+	"compatibility_date": "2024-04-20"
   }
   
