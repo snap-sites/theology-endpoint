@@ -1,5 +1,4 @@
-const apiKey = OPENAI_API_KEY; // Assuming 'API_KEY' is set as a secret in Cloudflare
-
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 export default {
 	async fetch(request: Request): Promise<Response> {
