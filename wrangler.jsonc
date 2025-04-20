@@ -3,7 +3,7 @@
 	"compatibility_date": "2025-04-19",
   	"main": "src/index.ts",
 	"vars": {
-	"OPENAI_API_KEY": "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"
+	"OPENAI_API_KEY": "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"
 	}
   }
   
