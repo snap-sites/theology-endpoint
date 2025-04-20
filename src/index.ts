@@ -1,26 +1,22 @@
-export default {
-	async fetch(request: Request, env: Env) {
-	  const apiKey = env.OPENAI_API_KEY;
-  
-	  const body = await request.json();
-  
-	  const openAIResponse = await fetch("https://api.openai.com/v1/completions", {
-		method: "POST",
-		headers: {
-		  "Content-Type": "application/json",
-		  "Authorization": `Bearer ${apiKey}`
+const response = await fetch("https://api.openai.com/v1/chat/completions", {
+	method: "POST",
+	headers: {
+	  "Content-Type": "application/json",
+	  Authorization: `Bearer ${env.OPENAI_API_KEY}`,
+	},
+	body: JSON.stringify({
+	  model: "gpt-3.5-turbo", // or "gpt-4"
+	  messages: [
+		{
+		  role: "system",
+		  content: `You are a ${body.role} from the ${body.denomination} denomination. Answer theological questions faithfully.`,
 		},
-		body: JSON.stringify({
-		  model: "gpt-3.5-turbo",
-		  prompt: body.text,
-		  max_tokens: 150
-		})
-	  });
-  
-	  const result = await openAIResponse.json();
-	  return new Response(JSON.stringify(result), {
-		headers: { "Content-Type": "application/json" }
-	  });
-	}
-  };
+		{
+		  role: "user",
+		  content: body.text,
+		}
+	  ],
+	  max_tokens: 500
+	}),
+  });
   
