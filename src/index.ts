@@ -1,5 +1,12 @@
 export default {
 	async fetch(request: Request): Promise<Response> {
+
+		headers: {
+			'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin': 'https://breakthrough-ministry-tools.pages.dev', // Set your allowed origin
+			'Access-Control-Allow-Methods': 'POST', // Methods allowed
+		  },
+		
 	  if (request.method === "OPTIONS") {
 		return new Response(null, {
 		  status: 204,
